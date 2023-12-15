@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D3C79B">
+
+    <TextView
+        android:id="@+id/tx_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="520dp"
+        android:textAlignment="center"
+        android:textSize="54sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back" />
+
+    <TextView
+        android:id="@+id/tx_date"
+        android:layout_width="346dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="235dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="272dp"
+        android:textAlignment="center"
+        android:textSize="54sp"
+        app:layout_constraintBottom_toTopOf="@+id/tx_switch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tx_note"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="55dp"
+        android:textAlignment="center"
+        android:textSize="54sp"
+        app:layout_constraintBottom_toTopOf="@+id/tx_static"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_date" />
+
+    <TextView
+        android:id="@+id/tx_static"
+        android:layout_width="193dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="523dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="31dp"
+        android:text="Done?"
+        android:textAlignment="center"
+        android:textSize="54sp"
+        app:layout_constraintBottom_toTopOf="@+id/del_static"
+        app:layout_constraintEnd_toStartOf="@+id/tx_switch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="129dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="577dp"
+        android:background="#1895F4"
+        android:text=" BACK"
+        android:textSize="20dp"
+        app:icon="@android:drawable/ic_input_delete"
+        app:layout_constraintBottom_toTopOf="@+id/del"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <Switch
+        android:id="@+id/tx_switch"
+        android:layout_width="55dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="110dp"
+        android:ellipsize="middle"
+        android:scrollbarSize="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_note" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/del"
+        android:layout_width="69dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:isScrollContainer="false"
+        android:scaleType="center"
+        app:backgroundTint="#00000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/del_static"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back"
+        app:maxImageSize="36dp"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <TextView
+        android:id="@+id/del_static"
+        android:layout_width="98dp"
+        android:layout_height="62dp"
+        android:layout_marginEnd="150dp"
+        android:text="DELETE"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/del"
+        app:layout_constraintTop_toBottomOf="@+id/tx_static" />
+</androidx.constraintlayout.widget.ConstraintLayout>
